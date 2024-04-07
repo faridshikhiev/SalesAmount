@@ -1,6 +1,8 @@
 package ru.netology.stats;
 
 import org.junit.jupiter.api.Test;
+import ru.netology.stats.StatsService;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StatsServiceTest {
@@ -35,7 +37,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int expectedMonthsBelowAverage = 4;
+        int expectedMonthsBelowAverage = 5;
         int actualMonthsBelowAverage = service.countMonthsBelowAverage(sales);
 
         assertEquals(expectedMonthsBelowAverage, actualMonthsBelowAverage);
@@ -47,7 +49,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int expectedMonthsAboveAverage = 7;
+        int expectedMonthsAboveAverage = 5;
         int actualMonthsAboveAverage = service.countMonthsAboveAverage(sales);
 
         assertEquals(expectedMonthsAboveAverage, actualMonthsAboveAverage);
@@ -59,7 +61,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int expectedMaxMonth = 7;
+        int expectedMaxMonth = 8;
         int actualMaxMonth = service.findMaxMonth(sales);
 
         assertEquals(expectedMaxMonth, actualMaxMonth);
@@ -71,7 +73,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int expectedMinMonth = 0;
+        int expectedMinMonth = 9;
         int actualMinMonth = service.findMinMonth(sales);
 
         assertEquals(expectedMinMonth, actualMinMonth);

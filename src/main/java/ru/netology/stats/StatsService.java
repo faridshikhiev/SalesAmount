@@ -15,10 +15,11 @@ public class StatsService {
     }
 
     public int countMonthsBelowAverage(long[] sales) {
-        long average = calculateAverage(sales);
         int count = 0;
-        for (long sale : sales) {
-            if (sale < average) {
+        long averageAmount = calculateAverage(sales);
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageAmount) {
                 count++;
             }
         }
@@ -26,10 +27,11 @@ public class StatsService {
     }
 
     public int countMonthsAboveAverage(long[] sales) {
-        long average = calculateAverage(sales);
         int count = 0;
-        for (long sale : sales) {
-            if (sale > average) {
+        long averageAmount = calculateAverage(sales);
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageAmount) {
                 count++;
             }
         }
